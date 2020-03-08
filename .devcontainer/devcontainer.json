@@ -1,0 +1,67 @@
+{
+    "name": "REPONAME_GITHUB-dev",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "vscode",
+    "runServices": ["vscode"],
+    "shutdownAction": "stopCompose",
+    "postCreateCommand": "yarn install",
+    "workspaceFolder": "/workspace",
+    // "overrideCommand": "",
+    "extensions": [
+        "msjsdiag.vscode-react-native",
+        "jpoissonnier.vscode-styled-components",
+        "dbaeumer.vscode-eslint",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "esbenp.prettier-vscode",
+        "visualstudioexptteam.vscodeintellicode",
+        "christian-kohler.npm-intellisense",
+        "IBM.output-colorizer",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "davidanson.vscode-markdownlint",
+        "shardulm94.trailing-spaces",
+        "alefragnani.Bookmarks",
+        "Gruntfuggly.todo-tree",
+        "quicktype.quicktype",
+        "spikespaz.vscode-smoothtype",
+        "stkb.rewrap",
+        "vscode-icons-team.vscode-icons",
+        "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+        // General settings
+        "files.eol": "\n",
+        // Docker
+        "remote.extensionKind": {
+            "ms-azuretools.vscode-docker": "workspace"
+        },
+        // Javascript
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "eslint.validate": [
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact"
+        ],
+        "editor.formatOnSave": true,
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": false
+          },
+          "[javascriptreact]": {
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.formatOnSave": false
+          },
+          "[typescript]": {
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.formatOnSave": false
+          },
+          "[typescriptreact]": {
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.formatOnSave": false
+          },
+          "prettier-eslint.eslintIntegration": true
+    }
+}
