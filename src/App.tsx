@@ -1,16 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
 
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-`;
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "red",
+  },
+});
 
 function App(): JSX.Element {
-    return <Container>Text</Container>;
+  const classes = useStyles();
+  return <div className={classes.root}>Text</div>;
 }
 
 export default App;
