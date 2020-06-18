@@ -3,13 +3,15 @@ on:
   release:
     types: [published]
     paths-ignore:
+      - .devcontainer
+      - .github/workflows/build.yml
       - .github/workflows/buildx-latest.yml
       - .github/workflows/dockerhub-description.yml
-      - .github/workflows/greetings.yml
       - .github/workflows/labels.yml
-      - .github/workflows/misspell.yml
-      - .github/workflows/security.yml
-      - .dockerignore
+      - .github/CODEOWNERS
+      - .github/CONTRIBUTING.md
+      - .github/FUNDING.yml
+      - .github/labels.yml
       - .gitignore
       - docker-compose.yml
       - LICENSE

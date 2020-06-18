@@ -1,10 +1,8 @@
-.git
 .devcontainer
-.vscode
+.git
+.github
 node_modules
 .gitignore
-.travis.yml
-ci.sh
 docker-compose.yml
 Dockerfile
 LICENSE
