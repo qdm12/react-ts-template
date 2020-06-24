@@ -17,7 +17,13 @@ module.exports = {
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
         "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-        "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+        "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": ["@material-ui/*/*/*", "!@material-ui/core/test-utils/*"]
+            }
+        ]
     },
     settings: {
         react: {
