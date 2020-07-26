@@ -10,7 +10,7 @@ COPY . .
 
 FROM base AS tester
 RUN yarn lint
-RUN yarn test --ci --coverage
+RUN yarn test --watchAll=false
 
 FROM base AS react-builder
 RUN yarn build
